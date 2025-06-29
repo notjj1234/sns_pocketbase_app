@@ -32,7 +32,7 @@ class SettingsPage extends StatelessWidget {
             ),
             SwitchListTile(
               title: Text(
-                getTranslation('dark_mode', languageProvider.currentLanguage), // Updated line
+                getTranslation('Dark Mode', languageProvider.currentLanguage), // Updated line
               ),
               value: themeProvider.isDarkMode,
               onChanged: (value) {
@@ -47,8 +47,8 @@ class SettingsPage extends StatelessWidget {
             SwitchListTile(
               title: Text(
                 languageProvider.currentLanguage == 'en'
-                    ? getTranslation('english', 'en') // Updated line
-                    : getTranslation('japanese', 'ja'), // Updated line
+                    ? getTranslation('English', 'en') // Updated line
+                    : getTranslation('Japanese', 'ja'), // Updated line
               ),
               value: languageProvider.currentLanguage == 'ja', // Toggle to Japanese if true
               onChanged: (bool isJapanese) {

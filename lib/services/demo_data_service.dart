@@ -33,7 +33,7 @@ class DemoDataService implements DataService {
     _demoPosts.addAll([
       {
         'id': '1',
-        'content': 'Excited to announce our new project launch!',
+        'content': 'Anyone can write a post here',
         'created': DateTime.now().toIso8601String(),
         'user': '1',
         'likes': ['2'],
@@ -41,7 +41,7 @@ class DemoDataService implements DataService {
       },
       {
         'id': '2',
-        'content': 'Great team meeting today!',
+        'content': 'This thing is pretty cool',
         'created': DateTime.now().subtract(const Duration(days: 1)).toIso8601String(),
         'user': '2',
         'likes': ['1'],

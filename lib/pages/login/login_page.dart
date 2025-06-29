@@ -21,6 +21,7 @@ class _LoginPageState extends State<LoginPage> {
   late TextEditingController _passwordController;
   bool _rememberMe = false;
   bool _isLoggingIn = false;
+  bool _showPassword = false;
   final RoundedLoadingButtonController _btnController = RoundedLoadingButtonController();
 
   @override
@@ -150,11 +151,22 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 16),
               TextField(
                 controller: _passwordController,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Password',
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      _showPassword ? Icons.visibility : Icons.visibility_off,
+                      color: Colors.grey,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        _showPassword = !_showPassword;
+                      });
+                    },
+                  ),
                 ),
-                obscureText: true,
+                obscureText: !_showPassword,
               ),
               const SizedBox(height: 16),
               Row(

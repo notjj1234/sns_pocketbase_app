@@ -81,9 +81,9 @@ class _FeedPageState extends State<FeedPage> {
       case 0:
         return translations[currentLanguage]?['feed'] ?? 'Feed';
       case 1:
-        return translations[currentLanguage]?['company_news'] ?? 'Company News';
+        return translations[currentLanguage]?['company_news'] ?? 'News Feed';
       case 2:
-        return translations[currentLanguage]?['company_calendar'] ?? 'Company Calendar';
+        return translations[currentLanguage]?['company_calendar'] ?? 'Calendar';
       case 3:
         return translations[currentLanguage]?['profile'] ?? 'Profile';
       case 4:
@@ -166,11 +166,11 @@ class _FeedPageState extends State<FeedPage> {
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.article),
-            label: translations[currentLanguage]?['company_news'] ?? 'Company News',
+            label: translations[currentLanguage]?['company_news'] ?? 'News Feed',
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.calendar_today),
-            label: translations[currentLanguage]?['company_calendar'] ?? 'Company Calendar',
+            label: translations[currentLanguage]?['company_calendar'] ?? 'Calendar',
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.person),
